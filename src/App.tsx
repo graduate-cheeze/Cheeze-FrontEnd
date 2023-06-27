@@ -1,5 +1,13 @@
+import * as P from '@pages'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
 function App() {
-  return <h1 className='text-3xl font-bold'>hello world</h1>
+  const router = createBrowserRouter([
+    {
+      children: [{ path: '/login', element: <P.LoginPage /> }],
+    },
+  ])
+  return <RouterProvider router={router} />
 }
 
 export default App
