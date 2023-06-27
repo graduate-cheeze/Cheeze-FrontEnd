@@ -19,7 +19,7 @@ const Input = ({ icon, activeIcon, ...props }: Props) => {
 
   return (
     <label
-      className={`w-full p-4 flex items-center bg-N10 border rounded-2xl transition ${
+      className={`w-full p-4 flex items-center bg-N10 border rounded-2xl transition cursor-text ${
         isFocus ? 'border-N50' : 'border-[transparent]'
       }`}
     >
