@@ -1,16 +1,35 @@
 import * as Icon from '@assets/svg'
-import { Button } from '@features/login/atoms'
-import { LoginInputs } from '@features/login/molecules'
+import { Button, Input } from '@features/login/atoms'
 import { Link } from 'react-router-dom'
+import { useLogin } from '@features/login/hooks'
 
 const LoginTemplate = () => {
+  const { onSubmit, emailRef, pwRef } = useLogin()
+
   return (
-    <div className='w-[28.5rem] bg-WHITE p-12 rounded-3xl flex items-center flex-col'>
+    <form
+      onSubmit={onSubmit}
+      className='w-[28.5rem] bg-WHITE p-12 rounded-3xl flex items-center flex-col'
+    >
       <span className='mb-8'>
         <Icon.CheezeLogo />
       </span>
 
-      <LoginInputs />
+      <div className='w-full space-y-2'>
+        <Input
+          ref={emailRef}
+          placeholder='이메일'
+          icon={<Icon.Mail />}
+          activeIcon={<Icon.Mail isActive />}
+        />
+        <Input
+          ref={pwRef}
+          placeholder='비밀번호'
+          type='password'
+          icon={<Icon.Pw />}
+          activeIcon={<Icon.Pw isActive />}
+        />
+      </div>
 
       <Button className='mt-10'>로그인</Button>
 
@@ -20,7 +39,7 @@ const LoginTemplate = () => {
           회원가입
         </Link>
       </div>
-    </div>
+    </form>
   )
 }
 
