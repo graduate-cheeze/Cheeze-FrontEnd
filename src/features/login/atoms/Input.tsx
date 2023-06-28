@@ -28,11 +28,13 @@ const Input = forwardRef<HTMLInputElement, Props>(
         <div className='flex gap-2 items-center'>
           {isFocus ? activeIcon : icon}
           <input
+            {...props}
             className='w-full outline-none text-base font-semibold text-BLACK bg-N10'
             onFocus={() => setIsFoucs(true)}
-            onBlur={() => setIsFoucs(false)}
+            onBlur={() => {
+              setIsFoucs(false)
+            }}
             ref={ref}
-            {...props}
           />
         </div>
       </label>
