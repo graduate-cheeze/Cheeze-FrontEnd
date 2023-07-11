@@ -6,7 +6,7 @@ const Header = () => {
   const { isSamePathname } = useSamePathCheck()
 
   return (
-    <header className='w-full h-14 pr-28 pl-28 bg-WHITE flex justify-between'>
+    <header className='w-full h-14 pr-28 pl-28 bg-WHITE flex justify-between sticky top-0 left-0 z-10'>
       <div className='flex items-center'>
         <HeaderLogo />
         <div className='ml-6 flex gap-4'>
