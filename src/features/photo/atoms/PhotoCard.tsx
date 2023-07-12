@@ -1,4 +1,4 @@
-import { PhotoDetailModal } from '@features/modal/atoms'
+import { PhotoDetailModal } from '@features/modal/molecules'
 import { ModalContext } from '@features/modal/provider/ModalProvider'
 import { useContext } from 'react'
 

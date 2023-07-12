@@ -1,12 +1,11 @@
-import { Libs } from '@features/modal'
-import { PhotoCard } from '@features/photo'
+import { Atoms, Libs } from '@features/modal'
 import * as SVG from '@assets/svg'
 
 const PhotoDetailModal = () => {
   return (
     <Libs.Modal>
       <div className='flex gap-4'>
-        <PhotoCard
+        <Atoms.DetailPhotoCard
           title='hello world'
           writer='곽희상'
           day={1}

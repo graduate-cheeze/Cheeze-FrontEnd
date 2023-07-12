@@ -1,1 +1,1 @@
-export { default as PhotoDetailModal } from './PhotoDetailModal'
+export { default as DetailPhotoCard } from './DetailPhotoCard'
