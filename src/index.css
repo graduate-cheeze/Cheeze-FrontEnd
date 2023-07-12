@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 * {
-  @apply cursor-default;
+  @apply cursor-default !important;
 }
 
 *:active {
-  @apply cursor-pointer;
+  @apply cursor-pointer !important;
 }
 
 html,

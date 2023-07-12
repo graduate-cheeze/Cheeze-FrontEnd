@@ -19,6 +19,9 @@ export default {
       WHITE: '#ffffff',
     },
     extend: {
+      translate: {
+        center: '-50%',
+      },
       cursor: {
         default: 'url(cursor.png), auto',
         pointer: 'url(pointer.png), auto',

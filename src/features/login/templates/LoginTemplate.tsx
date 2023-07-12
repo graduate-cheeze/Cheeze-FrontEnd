@@ -1,5 +1,6 @@
 import * as Icon from '@assets/svg'
-import { Button, Input } from '@features/login/atoms'
+import { Input } from '@features/login/atoms'
+import { Button } from '@features/global'
 import { Link } from 'react-router-dom'
 import { useLogin } from '@features/login/hooks'
 

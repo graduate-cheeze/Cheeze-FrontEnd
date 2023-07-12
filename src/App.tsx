@@ -10,6 +10,7 @@ function App() {
         { path: '/', element: <P.MainPage /> },
         { path: '/login', element: <P.LoginPage /> },
         { path: '/register', element: <P.RegisterPage /> },
+        { path: '/share', element: <P.SharePage /> },
       ],
     },
   ])

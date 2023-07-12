@@ -1,4 +1,5 @@
-import { Button, Input } from '@features/login/atoms'
+import { Button } from '@features/global'
+import { Input } from '@features/login/atoms'
 import { InputWrapper } from '@features/register/molecules'
 import * as Icon from '@assets/svg'
 import { Link } from 'react-router-dom'
