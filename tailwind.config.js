@@ -18,6 +18,12 @@ export default {
       BLACK: '#000000',
       WHITE: '#ffffff',
     },
+    extend: {
+      cursor: {
+        default: 'url(cursor.png), auto',
+        pointer: 'url(pointer.png), auto',
+      },
+    },
   },
   plugins: [],
 }

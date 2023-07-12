@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply cursor-default;
+}
+
+a,
+button {
+  @apply cursor-pointer;
+}
+
 html,
 body {
   height: 100%;
