@@ -2,7 +2,7 @@ import { PhotoDetailModal } from '@features/modal/molecules'
 import { ModalContext } from '@features/modal/provider/ModalProvider'
 import { useContext } from 'react'
 
-interface Props extends PhotoType {}
+interface Props extends PhotoType { }
 
 const PhotoCard = ({ title, imageUrl, day, writer }: Props) => {
   const { open } = useContext(ModalContext)
@@ -10,7 +10,7 @@ const PhotoCard = ({ title, imageUrl, day, writer }: Props) => {
   return (
     <div
       onClick={() => open(<PhotoDetailModal />)}
-      className='w-80 h-[25rem] p-4 rounded-2xl shadow-[rgba(0,0,0,0.12)] shadow-md flex flex-col gap-4 cursor-pointer bg-WHITE'
+      className='w-80 h-[25rem] p-4 rounded-2xl shadow-[rgba(0,0,0,0.12)] shadow-md flex flex-col gap-4 bg-WHITE'
     >
       <div className='w-72 h-72 relative'>
         <img
