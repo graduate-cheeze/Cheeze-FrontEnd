@@ -46,7 +46,7 @@ const Modal = ({ children }: Props) => {
   return ReactDOM.createPortal(
     <div
       onClick={close}
-      className='flex justify-center items-center fixed top-0 left-0 w-screen h-screen backdrop-blur'
+      className='flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-[#FFFFFFD9] backdrop-blur-xl'
     >
       {cloneElement(children, { onClick })}
     </div>,
