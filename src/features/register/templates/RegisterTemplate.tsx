@@ -36,7 +36,7 @@ const RegisterTemplate = () => {
 
         <InputWrapper label='닉네임'>
           <Input
-            {...register('nickname', { required: true })}
+            {...register('nickName', { required: true })}
             placeholder='닉네임을 입력해주세요.'
           />
         </InputWrapper>

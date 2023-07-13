@@ -1,7 +1,7 @@
 import { axiosWrapper } from '@libs'
 
 interface Response {
-  nickname: string
+  nickName: string
   image: ImageType[]
 }
 

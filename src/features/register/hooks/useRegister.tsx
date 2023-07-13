@@ -4,7 +4,7 @@ import { Services } from '@features/register'
 
 interface FormType {
   email: string
-  nickname: string
+  nickName: string
   password: string
 }
 

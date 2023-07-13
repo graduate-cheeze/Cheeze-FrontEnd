@@ -13,7 +13,11 @@ interface Response {
 }
 
 const loginService = async (body: Request) => {
-  const res = await axiosWrapper<Response>({ method: 'get', data: body })
+  const res = await axiosWrapper<Response>({
+    method: 'post',
+    url: '/auth/signin',
+    data: body,
+  })
   if (!res) return
   return res.data
 }

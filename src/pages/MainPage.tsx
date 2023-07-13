@@ -8,7 +8,7 @@ const MainPage = () => {
 
   return (
     <MainPageLayout>
-      <Header nickname={data?.nickname} />
+      <Header nickname={data?.nickName} />
       <PhotoList images={data?.image} />
     </MainPageLayout>
   )
