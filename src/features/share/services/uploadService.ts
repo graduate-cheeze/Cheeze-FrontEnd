@@ -12,7 +12,6 @@ const uploadService = async (body: FormData) => {
     method: 'post',
     url: '/image',
     headers: {
-      Authorization: tokenManager.accessToken,
       'Content-Type': 'multipart/form-data',
     },
     data: body,

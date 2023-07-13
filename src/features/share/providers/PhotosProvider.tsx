@@ -4,12 +4,14 @@ interface InitialState {
   photos: string[]
   addPhoto: (imageUrl: string) => void
   removePhoto: (imageUrl: string) => void
+  resetPhoto: () => void
 }
 
 const initialState: InitialState = {
   photos: [],
   addPhoto: () => {},
   removePhoto: () => {},
+  resetPhoto: () => {},
 }
 
 export const PhotoContext = createContext<InitialState>(initialState)
@@ -29,8 +31,14 @@ const PhotoProvider = ({ children }: Props) => {
     setPhotos(photos.filter((i) => i !== imageUrl))
   }
 
+  const resetPhoto = () => {
+    setPhotos([])
+  }
+
   return (
-    <PhotoContext.Provider value={{ photos, addPhoto, removePhoto }}>
+    <PhotoContext.Provider
+      value={{ photos, addPhoto, removePhoto, resetPhoto }}
+    >
       {children}
     </PhotoContext.Provider>
   )

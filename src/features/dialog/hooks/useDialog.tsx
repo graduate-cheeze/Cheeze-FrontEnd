@@ -7,7 +7,7 @@ const useDialog = () => {
   const { open } = useContext(ModalContext)
 
   const dialog = (dialogElement: ReactNode) =>
-    new Promise((resolve) => {
+    new Promise<string | false>((resolve) => {
       emitter.on(eventName, (result) => resolve(result))
       open(dialogElement)
     })

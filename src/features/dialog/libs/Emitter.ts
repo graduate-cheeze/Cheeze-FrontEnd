@@ -1,3 +1,5 @@
+type Any = any
+
 export interface CallbacksType {
   [name: string]: <T>(param: T) => void
 }
@@ -5,7 +7,7 @@ export interface CallbacksType {
 class Emitter {
   private callbacks: CallbacksType = {}
 
-  public on(eventName: string, callback: <T>(params: T) => void) {
+  public on(eventName: string, callback: (params: Any) => void) {
     this.callbacks[eventName] = callback
   }
 
