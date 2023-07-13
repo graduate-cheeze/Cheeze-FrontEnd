@@ -1,4 +1,3 @@
-import { MouseEvent } from 'react'
 import * as SVG from '@assets/svg'
 
 interface Props {
@@ -7,8 +6,6 @@ interface Props {
 }
 
 const Image = ({ src, onDelete }: Props) => {
-  const onClick = (e: MouseEvent<HTMLDivElement>) => e.stopPropagation()
-
   return (
     <div className='relative'>
       <img

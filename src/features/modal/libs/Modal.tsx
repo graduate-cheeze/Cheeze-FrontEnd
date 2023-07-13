@@ -11,9 +11,10 @@ import { ModalContext } from '@features/modal/provider/ModalProvider'
 
 interface Props {
   children: ReactElement
+  blurOnly?: boolean
 }
 
-const Modal = ({ children }: Props) => {
+const Modal = ({ children, blurOnly }: Props) => {
   const [isCSR, setIsCSR] = useState(false)
   const { close } = useContext(ModalContext)
 
@@ -46,7 +47,9 @@ const Modal = ({ children }: Props) => {
   return ReactDOM.createPortal(
     <div
       onClick={close}
-      className='flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-[#FFFFFFD9] backdrop-blur-xl'
+      className={`flex justify-center items-center fixed top-0 left-0 w-screen h-screen backdrop-blur-xl z-50 ${
+        blurOnly ? '' : 'bg-[#FFFFFFD9]'
+      }`}
     >
       {cloneElement(children, { onClick })}
     </div>,
