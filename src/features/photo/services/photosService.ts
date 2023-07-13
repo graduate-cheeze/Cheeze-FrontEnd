@@ -6,7 +6,10 @@ interface Response {
 }
 
 const photosService = async () => {
-  const res = await axiosWrapper<Response>({ method: 'get', url: '/user' })
+  const res = await axiosWrapper<Response>({
+    method: 'get',
+    url: '/user/front',
+  })
   if (res) return res.data
 }
 

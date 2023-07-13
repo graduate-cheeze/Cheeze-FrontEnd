@@ -1,4 +1,3 @@
-import TokenManager from '@api/lib/TokenManager'
 import { axiosWrapper } from '@libs'
 
 interface Response {
@@ -6,8 +5,6 @@ interface Response {
 }
 
 const uploadService = async (body: FormData) => {
-  const tokenManager = new TokenManager()
-
   const res = await axiosWrapper<Response>({
     method: 'post',
     url: '/image',
