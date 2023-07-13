@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { Provider } from '@features/modal'
+import { PhotoProvider } from '@features/share'
 import App from './App.tsx'
 import './index.css'
 
@@ -11,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Provider.ModalProvider>
-        <App />
+        <PhotoProvider>
+          <App />
+        </PhotoProvider>
       </Provider.ModalProvider>
     </QueryClientProvider>
   </React.StrictMode>

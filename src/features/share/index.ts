@@ -1,3 +1,6 @@
 export * as Atoms from './atoms'
 export * as Molecules from './molecules'
 export * as Templates from './templates'
+export * as Hooks from './hooks'
+export * as Services from './services'
+export { PhotoProvider } from './providers'

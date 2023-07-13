@@ -19,6 +19,7 @@ const useLogin = () => {
     if (!data) return
 
     TokenManager.setToken(data)
+    console.log(data)
     navigate('/')
   }
 
