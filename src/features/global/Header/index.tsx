@@ -2,7 +2,11 @@ import { HeaderLogo } from '@assets/svg'
 import { Link } from 'react-router-dom'
 import useSamePathCheck from './useSamePathCheck'
 
-const Header = () => {
+interface Props {
+  nickname?: string
+}
+
+const Header = ({ nickname }: Props) => {
   const { isSamePathname } = useSamePathCheck()
 
   return (
@@ -30,7 +34,7 @@ const Header = () => {
       </div>
 
       <div className='font-bold flex items-center'>
-        변찬우 님, 안녕하세요. 👋
+        {nickname || ''} 님, 안녕하세요. 👋
       </div>
     </header>
   )
