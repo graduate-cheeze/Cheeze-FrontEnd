@@ -6,7 +6,7 @@ interface Props {
 
 const PhotoList = ({ images }: Props) => {
   return (
-    <div className='mx-auto w-full max-w-[20rem] md:max-w-[41rem] lg:max-w-[62rem] xl:max-w-[83rem] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+    <div className='mx-auto w-full h-full max-w-[20rem] md:max-w-[41rem] lg:max-w-[62rem] xl:max-w-[83rem] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
       {images?.map((i) => (
         <PhotoCard
           key={i.id}
