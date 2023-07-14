@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Tilt from 'react-parallax-tilt'
 
 interface Props extends ImageType {
