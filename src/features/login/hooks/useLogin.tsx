@@ -2,10 +2,8 @@ import { useRef } from 'react'
 import { FormEvent } from 'react'
 import { Services } from '@features/login'
 import TokenManager from '@api/lib/TokenManager'
-import { useNavigate } from 'react-router-dom'
 
 const useLogin = () => {
-  const navigate = useNavigate()
   const emailRef = useRef<HTMLInputElement>(null)
   const pwRef = useRef<HTMLInputElement>(null)
 
@@ -19,8 +17,7 @@ const useLogin = () => {
     if (!data) return
 
     TokenManager.setToken(data)
-    console.log(data)
-    navigate('/')
+    location.href = '/'
   }
 
   return { emailRef, pwRef, onSubmit }
